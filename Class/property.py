@@ -55,25 +55,31 @@ class Date:
     def get_date(self):
         return '{}.{}.{}'.format(self._number,self._month,self._year)
 
-def test_date(number):
+def test_date():
+    # number = '13.10.2021'
+    # d = Date()
+    # d. set_date(number)
+    # print(d.get_date())
+    # if number != d.get_date():
+    #     return False
+
+    # тестируем предстоящие нули
+    number = '01.09.2021'
     d = Date()
     d. set_date(number)
     print(d.get_date())
     if number != d.get_date():
         return False
-    else:
-        return True
+
+    return True
 
 
-if test_date('13.10.2021'):
+if test_date():
     print('sucsess')
 else:
     print('fail')
 
-if test_date('01.09.2021'):
-    print('sucsess')
-else:
-    print('fail')
+
 
 
 #use_month_class()
