@@ -54,29 +54,27 @@ class Pizza:
             print(product, 'добавлен в состав пиццы', self.name)
 
 
-emp_1 = Employee('Ivan', 'Morozov', 'chef', 200000)
-emp_2 = Employee('Olga', 'Bobileva', 'waitress', 60000)
-emp_3 = Employee('Igor', 'Korolev', 'waiter', 60000)
-emp_1.name_in_book = 'Anna Bolshova waitress'
+def main():
+    emp_1 = Employee('Ivan', 'Morozov', 'chef', 200000)
+    emp_2 = Employee('Olga', 'Bobileva', 'waitress', 60000)
+    emp_3 = Employee('Igor', 'Korolev', 'waiter', 60000)
+    emp_1.name_in_book = 'Anna Bolshova waitress'
 
+    emp_1.name_in_book = 'Anna Bolshova chef'
 
-# it will "brake" program. Need make save setter for name_in_book
-# cases:
-#   1: if inapropriate argument "name" do nothing (не присваивать ничего если не корректно)
-#   2: throw exception (проанализировать корректность аргумента name и выдать исклюючение если некорректно)
-#      требуется изучение исключений. Пока не нужно делать. Но надо знать что такой вариант обработки\реакции существует
-emp_1.name_in_book = 'Anna Bolshova chef'
+    print(emp_1.fullname)
+    print(emp_1.position)
+    print(emp_1.name_in_book)
 
-print(emp_1.fullname)
-print(emp_1.position)
-print(emp_1.name_in_book)
+    #del emp_1.name_in_book
 
-#del emp_1.name_in_book
+    #print(Employee.amount_emp)
 
-#print(Employee.amount_emp)
+    pizza_1 = Pizza("Margarita", ['chesse','tomatoes'])
+    pizza_2 = Pizza('Cezar', ['bekon','salat','cheese'])
 
-pizza_1 = Pizza("Margarita", ['chesse','tomatoes'])
-pizza_2 = Pizza('Cezar', ['bekon','salat','cheese'])
+    #pizza_2.add_ingredients('onion')
 
-#pizza_2.add_ingredients('onion')
+if __name__ == '__main__':
+    main()
 

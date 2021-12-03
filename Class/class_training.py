@@ -28,15 +28,6 @@ class Employee:
 # необходимо использовать либо ссылку на класс (Employee.raise_amount), либо на инстанс (self.raise_amount)
 # when we try to access an attribute on an instance it will first check if the instance contains that attribute.
 # if not , it will see if the class or any class that it inherits from contains that attribute.
-# print(Employee.raise_amount)
-# print(emp_1.raise_amount)
-# print(emp_2.raise_amount)
-#(1.04,1.04,1.04)
-#emp_1.raise_amount=1.05
-# print(Employee.raise_amount)
-# print(emp_1.raise_amount)
-# print(emp_2.raise_amount)
-# (1.04,1.05,1.04)
 
     def __repr__(self):
         return 'Employee({},{},{})'.format(self.first, self.last, self.pay)
@@ -102,62 +93,75 @@ class Manager(Employee):
             print('-->', emp.fullname())
 
 
-emp_1 = Employee('Semen', 'Kozlov', 100000)
-emp_2 = Employee('Maria', 'Slepakova', 80000)
+def main():
 
-print(len(emp_1))
+    # print(Employee.raise_amount)
+    # print(emp_1.raise_amount)
+    # print(emp_2.raise_amount)
+    # (1.04,1.04,1.04)
+    # emp_1.raise_amount=1.05
+    # print(Employee.raise_amount)
+    # print(emp_1.raise_amount)
+    # print(emp_2.raise_amount)
+    # (1.04,1.05,1.04)
+    emp_1 = Employee('Semen', 'Kozlov', 100000)
+    emp_2 = Employee('Maria', 'Slepakova', 80000)
 
-#print(emp_1+emp_2)
-#print(emp_1)
-#print(repr(emp_1))
-#print(str(emp_1))
+    print(len(emp_1))
 
-#print(emp_1.__repr__())
-#print(emp_1.__str__())
-dev_1 = Developer('Ivan','Morozov',40000,'Python')
-dev_2 = Developer('Olga','Avdeeva',100000, 'Java')
+    #print(emp_1+emp_2)
+    #print(emp_1)
+    #print(repr(emp_1))
+    #print(str(emp_1))
 
-manager_1 = Manager('Jhon', 'Smith', 150000,[dev_1,dev_2])
+    #print(emp_1.__repr__())
+    #print(emp_1.__str__())
+    dev_1 = Developer('Ivan','Morozov',40000,'Python')
+    dev_2 = Developer('Olga','Avdeeva',100000, 'Java')
 
-print(dev_2.pay)
-dev_2.apply_raise()
-print(dev_2.pay)
+    manager_1 = Manager('Jhon', 'Smith', 150000,[dev_1,dev_2])
 
-print(manager_1.print_emp())
-#manager_1.remove_emp(dev_2)
-#print(manager_1.print_emp())
+    print(dev_2.pay)
+    dev_2.apply_raise()
+    print(dev_2.pay)
 
-#print(dev_1.prog_lang)
-#print(dev_2.email)
-#print(help(Developer))
+    print(manager_1.print_emp())
+    #manager_1.remove_emp(dev_2)
+    #print(manager_1.print_emp())
+
+    #print(dev_1.prog_lang)
+    #print(dev_2.email)
+    #print(help(Developer))
 
 
-#print(dev_1.email)
-#print(emp_1.Fullname())
-#print(Employee.Fullname(emp_1))
+    #print(dev_1.email)
+    #print(emp_1.Fullname())
+    #print(Employee.Fullname(emp_1))
 
-#print(emp_1.pay)
-#emp_1.apply_raise()
-#print(emp_1.pay)
+    #print(emp_1.pay)
+    #emp_1.apply_raise()
+    #print(emp_1.pay)
 
-#print(Employee.raise_amount)
-#print(emp_1.raise_amount)
-#print(emp_2.raise_amount)
+    #print(Employee.raise_amount)
+    #print(emp_1.raise_amount)
+    #print(emp_2.raise_amount)
 
-#emp_1.raise_amount=1.05
-#Employee.raise_amount=1.1
-#print(emp_1.__dict__)
+    #emp_1.raise_amount=1.05
+    #Employee.raise_amount=1.1
+    #print(emp_1.__dict__)
 
-#print(Employee.raise_amount)
-#print(emp_1.raise_amount)
-#print(emp_2.raise_amount)
+    #print(Employee.raise_amount)
+    #print(emp_1.raise_amount)
+    #print(emp_2.raise_amount)
 
-#print(Employee.num_of_emp)
+    #print(Employee.num_of_emp)
 
-#emp_str_1 = 'Alena-Grigoryeva-10000'
-#emp_str_2 = 'Gosha-Andreev-50000'
+    #emp_str_1 = 'Alena-Grigoryeva-10000'
+    #emp_str_2 = 'Gosha-Andreev-50000'
 
-#new_emp_str = Employee.from_string(emp_str_1)
-#print(new_emp_str.email)
-#print(new_emp_str.pay)
+    #new_emp_str = Employee.from_string(emp_str_1)
+    #print(new_emp_str.email)
+    #print(new_emp_str.pay)
 
+if __name__ == '__main__':
+    main()

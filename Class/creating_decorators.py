@@ -30,21 +30,26 @@ def two(n):
     #print(datetime.now() - start)
     return l
 
-#l1 = one(100)
-#l2 = two(100)
+def main():
+    #l1 = one(100)
+    #l2 = two(100)
 
-#print(l1)
-#print(l2)
+    #print(l1)
+    #print(l2)
 
-#  функция как обьект
-#z = one
-#y = z(10)
-#print(y)
+    #  функция как обьект
+    #z = one
+    #y = z(10)
+    #print(y)
 
-# функция как аргумент, декораторы необходимо заключить в #
-#z1 = timeit(one)(10)
-#print(type(z1), z1.__name__)
+    # функция как аргумент, декораторы необходимо заключить в #
+    #z1 = timeit(one)(10)
+    #print(type(z1), z1.__name__)
 
-# декоратор принимает значения
+    # декоратор принимает значения
 
-l= timeit('name')(one)(10)
+    l= timeit('name')(one)(10)
+
+
+if __name__ == '__main__':
+    main()
