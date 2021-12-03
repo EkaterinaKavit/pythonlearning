@@ -47,7 +47,7 @@ class Date:
 
     def set_date(self,date):
         number,month,year = date.split('.')
-        self._number = int(number) + 1
+        self._number = int(number)
         self._month = int(month)
         self._year = int(year)
 
@@ -55,19 +55,25 @@ class Date:
     def get_date(self):
         return '{}.{}.{}'.format(self._number,self._month,self._year)
 
-def test_date():
+def test_date(number):
     d = Date()
-    d. set_date('10.10.2021')
+    d. set_date(number)
     print(d.get_date())
-    return True
+    if number != d.get_date():
+        return False
+    else:
+        return True
 
-if(test_date()):
+
+if test_date('13.10.2021'):
     print('sucsess')
 else:
     print('fail')
 
-use_date()
-
+if test_date('01.09.2021'):
+    print('sucsess')
+else:
+    print('fail')
 
 
 #use_month_class()
