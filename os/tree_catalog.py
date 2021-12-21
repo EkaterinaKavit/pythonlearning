@@ -12,7 +12,7 @@ def main():
         for file in files:
             if file[0] == 'M':
                 lots.append(file[0:7])
-        lots_unique = '\n'.join(set(lots))
+    lots_unique = '\n'.join(set(lots))
 
     try:
         f = open('new_list_unique_lots.txt','w')
